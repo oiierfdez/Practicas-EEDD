@@ -20,6 +20,13 @@ void ordenarBurbuja(VDinamico<Especie>& v) {
     }
 }
 
+VDinamico<Especie*>BuscarPorNombre(VDinamico<Especie*>&v,string& palabra) {
+    VDinamico<Especie*> resultado;
+    for (unsigned int i=0;i<v.get__tlogico();i++) {
+        std::string nombre=v[i].get
+    }
+}
+
 int main(int argc, const char * argv[]) {
 
     std::ifstream is;
