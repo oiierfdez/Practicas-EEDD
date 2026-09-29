@@ -5,6 +5,21 @@
 #include "VDinamico.h"
 #include "Especie.h"
 
+
+void ordenarBurbuja(VDinamico<Especie>& v) {
+
+    unsigned int n=v.get__tlogico();
+    for (unsigned int i=0;i<n-1;i++) {
+        for (unsigned int j=0;j<n-i-1;j++) {
+            if (v[j+1]<v[j]) {
+                Especie aux=v[j];
+                v[j]=v[j+1];
+                v[j+1]=aux;
+            }
+        }
+    }
+}
+
 int main(int argc, const char * argv[]) {
 
     std::ifstream is;
@@ -54,6 +69,15 @@ int main(int argc, const char * argv[]) {
         std::cout << "Tiempo de lectura: " << ((clock() - t_ini) / (float) CLOCKS_PER_SEC) << " segs." << std::endl;
     } else {
         std::cout << "Error de apertura en archivo" << std::endl;
+    }
+
+    //PARTE DE ROBERTO --> CUIDADO CON LAS VARIABLES
+    VDinamico<Especie>vEspecies;
+    ordenarBurbuja(vEspecies);
+
+    unsigned int total=vEspecies.get__tlogico();
+    for (unsigned int i=total;i>total-50;i--) {
+        std::cout<<vEspecies[i].getCodigo();
     }
 
 
