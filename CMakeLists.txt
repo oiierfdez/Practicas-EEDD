@@ -1,6 +1,7 @@
-cmake_minimum_required(VERSION 4.0)
-project(Codigo_Clase_Practica_1_V2)
+cmake_minimum_required(VERSION 3.10)
+project(Practica1)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Codigo_Clase_Practica_1_V2 main.cpp)
+
+add_executable(Practica1 main.cpp Especie.cpp)

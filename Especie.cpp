@@ -15,3 +15,9 @@
 std::string Especie::getCodigo() const {
   return codigoEspecie;
 }
+
+std::string Especie::getnombre_cientifico() const {
+    return nombreCientifico;
+}
+
+Especie::Especie(std::string codigo, std::string comun, std::string cientifico, std::string tipo):codigoEspecie(codigo),nombreComun(comun),nombreCientifico(cientifico),tipoPlanta(tipo){}
